@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Teacher, Welcome to Digital Hall Pass</h1>
+        <button class="navigate-button" onclick="navigateTo('../Student_Page/student.html')">Go to Student</button>
+    </header>
+
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <button class="always-hover"><i class="fas fa-qrcode"></i>Dashboard</button>
+            <button><i class="fas fa-bookmark"></i>History</button>
+            <button><i class="fas fa-suitcase"></i>Out of Office</button>
+            <button><i class="fas fa-arrow-down"></i>Updates</button>
+            <button><i class="fas fa-users"></i>Training</button>
+        </div>
+
+        <button class="toggle-sidebar" onclick="toggleSidebar()">
+            <span class="fas fa-bars" id="bars"></span>
+        </button>
+
+        <div class="content">
+            <div class="dashboard">
+                <button class="always-hover">Awaiting Approval</button>
+                <button>My Passes</button>
+                <button>My Appointments</button>
+                <button>Pause Dashboard</button>
+                <input type="search" placeholder="Search">
+                <div>
+                    <table id="submissionsTable">
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Departure</th>
+                                <th>Destination</th>
+                                <th>Time</th>
+                                <th>Approve All<input type="checkbox" id="approve-all" onclick="approveAll()"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    <button class="clear-button" onclick="clearAll()">Clear Approved</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

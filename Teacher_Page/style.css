@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background: linear-gradient(rgb(19, 26, 66), rgb(10, 52, 99));
+    color: white;
+    text-align: center;
+    position: relative;
+    align-content: center;
+}
+
+h1{
+    font-size: 7ch;
+}
+
+.toggle-sidebar {
+    background-color:#ffc107;;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    width: 250px;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.sidebar.closed {
+    width: 0;
+}
+
+.sidebar button {
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.sidebar button.always-hover {
+    background-color:rgb(226, 232, 238);
+    color:rgb(0, 4, 255);
+}
+
+
+.sidebar button:hover {
+    background-color:rgb(226, 232, 238);
+    color:rgb(0, 4, 255);
+}
+
+
+.sidebar button:active {
+    background-color: #bbb;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 2rem; /* Padding below the header */
+}
+
+.dashboard button {
+    padding: 15px 20px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    flex-grow: 1; /* Ensures buttons scale evenly */
+    text-align: center;
+}
+.dashboard button.always-hover {
+    color: #ffc107;
+}
+
+.dashboard button:hover {
+    color: #ffc107;
+}
+
+.dashboard input[type="search"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 2; /* Makes the search input larger */
+    font-size: 16px;
+}
+table {
+    width: 100%;
+    margin-top: 20px; /* Adds space between dashboard and table */
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    border-radius: 8px; /* Rounds table edges */
+    overflow: hidden;
+}
+table thead th {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+table tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tr.highlight {
+    background-color: #d4edda;
+}
+
+.filter-row input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dashboard {
+    justify-content: space-between; /* Ensures proper spacing */
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px; /* Adds space between buttons and search bar */
+}
+
+.dashboard .clear-button {
+    margin-top: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigate-button {
+    background-color: #ffc107;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}

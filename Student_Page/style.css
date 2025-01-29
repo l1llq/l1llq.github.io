@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background: linear-gradient(rgb(19, 26, 66), rgb(10, 52, 99));
+    color: white;
+    text-align: center;
+    position: relative;
+    align-content: center;
+}
+
+h1{
+    font-size: 7ch;
+}
+
+.toggle-sidebar {
+    background-color:#ffc107;;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    width: 250px;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.sidebar.closed {
+    width: 0;
+}
+
+.sidebar button {
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar button.always-hover {
+    background-color:rgb(226, 232, 238);
+    color:rgb(0, 4, 255);
+}
+
+.sidebar button:hover {
+    background-color:rgb(226, 232, 238);
+    color:rgb(0, 4, 255);
+}
+
+.sidebar button:active {
+    background-color: #bbb;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 2rem; /* Padding below the header */
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.tabs-container button {
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+.tabs-container button:hover {
+    color: #ffc107;
+}
+
+.tabs-container button.active {
+    border-color: #2541b4;
+    font-weight: bold;
+    color: #2541b4;
+}
+
+.tab-content {
+    display: none;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.dropdown label {
+    font-weight: bold;
+}
+
+.dropdown select option[value=""][disabled] {
+    color: #aaa; 
+}
+
+.recent-selections {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.recent-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.selection-card {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.selection-card:hover {
+    background-color: #e0e0e0;
+}
+
+.navigate-button {
+    background-color: #ffc107;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.start-button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #2541b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    color: #ffc107;
+}
+.start-button:active {
+    background-color: #162b7c;
+}
+
+.submit-button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #2541b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    color: #ffc107;
+}
+
+.submit-button:active {
+    background-color: #162b7c;
+}
+
+.timer {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

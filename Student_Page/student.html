@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Hall Pass App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Student, Welcome to the Digital Hall Pass</h1>
+        <button class="navigate-button" onclick="navigateTo('../Teacher_Page/teacher.html')">Teacher Side</button>
+    </header>
+
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <button class="always-hover"><i class="fas fa-qrcode"></i>Create Pass</button>
+            <button><i class="fas fa-bookmark"></i>Active Pass</button>
+            <button><i class="fas fa-calendar"></i>Appointments</button>
+            <button><i class="fas fa-arrow-down"></i>Updates</button>
+            <button><i class="fas fa-users"></i>Training</button>
+        </div>
+
+        <button class="toggle-sidebar" onclick="toggleSidebar()">
+            <span class="fas fa-bars" id="bars"></span>
+        </button>
+
+        <div class="content">
+            <div class="box">
+                <div class="tabs-container">
+                    <button class="active" onclick="switchTab('now-pass')">Now Pass</button>
+                    <button onclick="switchTab('appointment-pass')">Appointment Pass</button>
+                </div>
+
+                <div id="now-pass" class="tab-content active">
+                    <div class="dropdown">
+                        <div>
+                            <label for="departing">Departing From:</label>
+                            <select id="departing-1" name="departing-1">
+                                <option value="" disabled selected hidden>-- Teacher/Location --</option>
+                                <option>Library</option>
+                                <option>Gym</option>
+                                <option>Cafeteria</option>
+                                <option>Science Lab</option>
+                                <option>Main Office</option>
+                            </select>
+                        </div>
+
+                        <div class="recent-selections">
+                            <div class="recent-container" id="recent-container-1"></div>
+                        </div>
+
+                        <div>
+                            <label for="destination">Destination:</label>
+                            <select id="destination-1" name="destination-1">
+                                <option value="" disabled selected hidden>-- Teacher/Location --</option>
+                                <option>Auditorium</option>
+                                <option>Classroom 101</option>
+                                <option>Playground</option>
+                                <option>Art Room</option>
+                                <option>Computer Lab</option>
+                            </select>
+                        </div>
+
+                        <div class="recent-selections">
+                            <div class="recent-container" id="recent-container-2"></div>
+                        </div>
+                        
+                    </div>
+                    <button class="start-button" id="timer-button" onclick="startTimer()">Start Time</button>
+                    <div class="timer" id="timer-display"></div>
+                </div>
+                
+                <div id="appointment-pass" class="tab-content">
+                    <form id="studentForm"></form>
+                        <div class="dropdown">
+                            <div>
+                                <label for="departing">Departing From:</label>
+                                <select id="departing-2" name="departing-2" required>
+                                    <option value="" disabled selected hidden>-- Teacher/Location --</option>
+                                    <option>Computer Lab</option>
+                                    <option>Gym</option>
+                                    <option>Cafeteria</option>
+                                    <option>Science Lab</option>
+                                    <option>Main Office</option>
+                                </select>
+                            </div>
+
+                            <div class="recent-selections">
+                                <div class="recent-container" id="recent-container-3"></div>
+                            </div>
+
+                            <div>
+                                <label for="destination">Destination:</label>
+                                <select id="destination-2" name="destination-2">
+                                    <option value="" disabled selected hidden>-- Teacher/Location --</option>
+                                    <option>Auditorium</option>
+                                    <option>Classroom 101</option>
+                                    <option>Study Hall</option>
+                                    <option>Art Room</option>
+                                    <option>Computer Lab</option>
+                                </select>
+                            </div>
+
+                            <div class="recent-selections">
+                                <div class="recent-container" id="recent-container-4"></div>
+                            </div>
+                            
+                            <label for="datetime">Select Date and Time:</label>
+                            <input type="datetime-local" id="datetime" />
+                        
+                        </div>
+
+                        <button class="submit-button" type="submit" id="submit-button" onclick="startSubmit()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
